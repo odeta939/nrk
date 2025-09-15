@@ -1,0 +1,9 @@
+services:
+  nrk:
+    build: .
+    image: nrk-cli:latest
+    env_file:
+      - .env
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
+    restart: "no"
